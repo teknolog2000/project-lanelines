@@ -2,19 +2,16 @@
 
 _Author: Sebastian Brannstrom_
 
-## Project description
-
-**Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-### Work
+## Work
 Please see the [Jupyter notebook](P1.ipynb).
 
 
-### Reflection
+## Reflection
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
@@ -68,9 +65,13 @@ Another problem is obstruction by other vehicles on the road. If the markings ar
 
 The maximum extent finding system is pretty primitive too, so if a car is obstructing dashed lane markings a bit ahead we would miss out on those segments.
 
+Finally, non-straight lane markings, such as for sharp turns or intersections would likely severely throw off the current process.
+
 
 ### 3. Suggest possible improvements to your pipeline
 
-To deal with the contrast problems we probably should be making use of dynamic coefficients for our Canny and Hough algorithms.
+To deal with the contrast problems we probably should be making use of dynamic coefficients for our Canny and Hough algorithms. I would assume a night time video to require substantially different parameters.
 
-There are substantially better filtering techniques that can be applied to the raw data produced by Hough, including statistical means and probably better heuristics than what I use.
+There are much better filtering techniques that can be applied to the raw data produced by Hough, including Kalman filters and other statistical means. There is probably also better heuristics that can be applied.
+
+Lots more training data would be needed to make the process substantially better.
