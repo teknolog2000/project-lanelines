@@ -43,8 +43,8 @@ To accomplish this I apply a primitive algorithm
 1. Find the maximum and minimum X and Y axis extensions of the entire set of segments. This is the output line.
 
 
-![Individual segments][images/individual.png]
-![Segments coalesced into a line][images/coalesced.png]
+![Individual segments](images/individual.png)
+![Segments coalesced into a line](images/coalesced.png)
 
 
 ### 2. Identify potential shortcomings with your current pipeline
