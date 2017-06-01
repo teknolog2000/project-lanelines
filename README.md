@@ -42,10 +42,8 @@ To accomplish this I apply a primitive aggregation algorithm
 1. Collect line segments into left and right groups based on their slope and position in the image.
 1. Find the maximum and minimum X and Y axis extensions of the entire set of segments. This is the aggregated output line.
 
-Before
+Below are before and after videos for this aggregation process
 ![Individual segments](images/individual.png)
-
-After
 ![Segments coalesced into a line](images/coalesced.png)
 
 This process gives us a single longest spanning line per side of the lane. However, since lane lines are often dashed, if we want to produce a line spanning the entire lane for a video, we need to aggreate this over a series of frames as the lane marking moves across our viewport.
