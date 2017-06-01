@@ -7,9 +7,10 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
+[Grading rubric](https://review.udacity.com/#!/rubrics/322/view) for the exercise.
+
 ## Work
 Please see the [Jupyter notebook](P1.ipynb).
-
 
 ## Reflection
 
@@ -23,9 +24,9 @@ My pipeline consisted of 9 steps.
 1. Run Canny edge detection
 1. Cut out area of interest based on camera viewpoint
 1. Apply Hough line detection
-1. Group line segments based on angle and position into "extended lines"
+1. Aggregate line segments based on angle and position into "extended lines" for right and left
 1. Collect extended lines over N frames
-1. Draw the maximum extended line from the set of N lines
+1. Again aggregate the line from set of N frames and draw the lines
 
 The best Canny edge detected was produced with a blur `kernel_size=11` and then applying a `low_threshold=100` and `high_threshold=200`. This seems to work alright for yellow lines as well.
 
