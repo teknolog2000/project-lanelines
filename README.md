@@ -45,17 +45,20 @@ To accomplish this I apply a primitive aggregation algorithm
 Before
 ![Individual segments](images/individual.png)
 
-Aafter
+After
 ![Segments coalesced into a line](images/coalesced.png)
 
 This process gives us a single longest spanning line per side of the lane. However, since lane lines are often dashed, if we want to produce a line spanning the entire lane for a video, we need to aggreate this over a series of frames as the lane marking moves across our viewport.
 
 To do this, we simply apply the same aggregation process as above across a series of frames in the video, taking the resulting lines for each frame and storing them in a buffer from which we extract a single new line per frame. This provides a sort of moving average, which works well for our purposes.
 
-The resulting videos are 
-* [solidWhiteRight.mp4](images/solidWhiteRight.mp4)
-* [solidYellowLeft.mp4](images/solidYellowLeft.mp4)
-* [challenge.mp4](images/challenge.mp4)
+Here is an example still from the `challenge.mp4` video
+![Challenge still](images/challenge.png)
+
+The processed videos are available for download here
+* [solidWhiteRight.mp4](images/solidWhiteRight.mp4?raw=true)
+* [solidYellowLeft.mp4](images/solidYellowLeft.mp4?raw=true)
+* [challenge.mp4](images/challenge.mp4?raw=true)
 
 
 ### 2. Identify potential shortcomings with your current pipeline
