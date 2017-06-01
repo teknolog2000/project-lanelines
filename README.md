@@ -1,6 +1,6 @@
 # **Finding Lane Lines on the Road** 
 
-Author: Sebastian Brannstrom
+_Author: Sebastian Brannstrom_
 
 ## Project description
 
@@ -10,10 +10,9 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
+### Work
+Please see the [Jupyter notebook](P1.ipynb).
 
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
 
 ### Reflection
 
@@ -43,6 +42,7 @@ To accomplish this I apply a primitive aggregation algorithm
 1. Find the maximum and minimum X and Y axis extensions of the entire set of segments. This is the aggregated output line.
 
 Below are before and after videos for this aggregation process
+
 ![Individual segments](images/individual.png)
 ![Segments coalesced into a line](images/coalesced.png)
 
@@ -50,7 +50,8 @@ This process gives us a single longest spanning line per side of the lane. Howev
 
 To do this, we simply apply the same aggregation process as above across a series of frames in the video, taking the resulting lines for each frame and storing them in a buffer from which we extract a single new line per frame. This provides a sort of moving average, which works well for our purposes.
 
-Here is an example still from the `challenge.mp4` video
+Here is an example still from the `challenge.mp4` video with a buffer of 10 frames
+
 ![Challenge still](images/challenge.png)
 
 The processed videos are available for download here
