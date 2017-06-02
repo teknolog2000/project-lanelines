@@ -10,7 +10,7 @@ The goals / steps of this project are the following:
 [Grading rubric](https://review.udacity.com/#!/rubrics/322/view) for the exercise.
 
 ## Work
-Please see the [Jupyter notebook](P1.ipynb).
+Please see the [Jupyter notebook](P1.ipynb) (which Github can now render), or the [HTML version](P1.html).
 
 ## Reflection
 
